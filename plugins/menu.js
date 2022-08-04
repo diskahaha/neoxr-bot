@@ -2,40 +2,53 @@ exports.run = {
    usage: ['menu', 'help', 'bot'],
    async: async (m, {
       client,
-      isPrefix
+      isPrefix,
+      command
    }) => {
-      let rows = [{
-         title: 'DOWNLOADER',
-         rowId: `${isPrefix}menutype 1`,
-         description: ``
-      }, {
-         title: 'GROUP TOOLS',
-         rowId: `${isPrefix}menutype 2`,
-         description: ``
-      }, {
-         title: 'TEXT MAKER',
-         rowId: `${isPrefix}menutype 3`,
-         description: ``
-      }, {
-         title: 'USER INFO',
-         rowId: `${isPrefix}menutype 4`,
-         description: ``
-      }, {
-         title: 'UTILITIES',
-         rowId: `${isPrefix}menutype 5`,
-         description: ``
-      }, {
-         title: 'OWNER TOOLS',
-         rowId: `${isPrefix}menutype 6`,
-         description: ``
-      }, {
-         title: 'SPECIAL',
-         rowId: `${isPrefix}menutype 7`,
-         description: ``
-      }]
-      await client.sendList(m.chat, '', global.db.setting.msg, '© neoxr-bot v2.2.0', 'Tap!', [{
-         rows
-      }], m)
+      if (/menu|help/i.test(command)) {
+         let rows = [{
+            title: 'TIKTOK VIEWS',
+            rowId: `${isPrefix}tiktokviews`,
+            description: `⚡Speed 100k/days`
+         }, {
+            title: 'TIKTOK LIKE',
+            rowId: `${isPrefix}ttlike`,
+            description: `⚡Speed 1k/days`
+         }, {
+            title: 'INSTAGRAM FOLLOWERS',
+            rowId: `${isPrefix}igfolow`,
+            description: `👥Real indo fast`
+         }, {
+            title: 'INSTAGRAM LIKE',
+            rowId: `${isPrefix}iglike`,
+            description: `❤️Real indo aktif`
+         }, {
+            title: 'YOUTUBE PREMIUM',
+            rowId: `${isPrefix}ytprem`,
+            description: `premium 4 bulan`
+         }]
+         let text = '• Pilih salah satu Kategori\n• Pilih salah satu Layanan yang ingin dipesan'
+         await client.sendList(m.chat, '', text, '', 'Select', [{
+            rows
+         }], m)
+      } else if (command == 'bot') {
+         client.reply(m.chat, setup(isPrefix), m)
+      }
    },
    error: false
+}
+
+const setup = prefix => {
+return `◦  ${prefix}backup
+◦  ${prefix}+owner *mention or reply*
+◦  ${prefix}-owner *mention or reply*
+◦  ${prefix}prefix *symbol*
+◦  ${prefix}+prefix *symbol*
+◦  ${prefix}-prefix *symbol*
+◦  ${prefix}restart
+◦  ${prefix}runtime
+◦  ${prefix}hidetag
+◦  ${prefix}group *close or open*
+◦  ${prefix}setname *text*
+◦  ${prefix}setdesc *text*`
 }
