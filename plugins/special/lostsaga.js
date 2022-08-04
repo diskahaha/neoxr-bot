@@ -4,7 +4,7 @@ exports.run = {
       client,
       isPrefix
    }) => {
-      const cover = await Func.fetchBuffer('./assets/image1.jpeg')
+      const cover = await Func.fetchBuffer('./media/image/image1.jpeg')
       const buttons = [{
          urlButton: {
             displayText: `Website`,
