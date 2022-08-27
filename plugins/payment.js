@@ -26,14 +26,8 @@ exports.run = {
 }
 
 const pay = () => {
-   return `「 PAYMENT 」 
+   return `「 𝕭𝖔𝖙 • Andii あ 」 
 
-Silahkan lakukan pembayaran melalui nomor e-wallet dibawah :
-
-OVO : 089653896400
-DANA : 089653896400
-GOPAY : 089653896400
-
-An. CAxxx
-Screenshoot Bukti Transfer dan kirim kesini !`
+Kenapa Bebek Kaki Nya Dua? 
+Karna Kau Wibu :v`
 }
