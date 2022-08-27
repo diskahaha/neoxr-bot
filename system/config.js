@@ -1,7 +1,7 @@
 // Owner number
-global.owner = '62882002088799'
+global.owner = '62821220876725'
 // Owner name
-global.owner_name = 'Tamara'
+global.owner_name = '𝕭𝖔𝖙 • Andii'
 // Maximum upload file size limit (Default : 250 MB)
 global.max_upload = 250
 // Delay for spamming protection (Default : 3 seconds)
@@ -22,7 +22,7 @@ global.Api = new (require('./neoxrApi'))('dKwtXX')
 global.chatai_bid = '164728'
 global.chatai_key = 'MKPsfkgXLZPGrWoH'
 // Footer text
-global.footer = 'ꜱɪᴍᴘʟᴇ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ ᴍᴀᴅᴇ ʙʏ ɴᴇᴏxʀ ッ'
+global.footer = 'ꜱɪᴍᴘʟᴇ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ ᴍᴀᴅᴇ ʙʏ 𝕭𝖔𝖙 • Andii あ ッ'
 // Global status
 global.status = Object.freeze({
    wait: Func.texted('bold', 'Processed . . .'),
